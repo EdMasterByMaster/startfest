@@ -15,6 +15,10 @@ Copie `.env.example` para `.env.local` e preencha `VITE_SUPABASE_URL` e `VITE_SU
 npm run build
 ```
 
+## GitHub Pages
+
+The Pages workflow builds the site on pushes to `main` and the StartFest feature branch, and on pull requests it runs the build without deploying. In the repository settings, choose **Settings > Pages > Build and deployment > Source: GitHub Actions**. The production build uses the `/startfest/` base path; local development keeps `/`. The page works with demo events until the public Supabase URL and anon key are configured.
+
 ## Supabase
 
 1. Aplique a migration em `supabase/migrations/20261120120000_create_event_guest_lists.sql`.
